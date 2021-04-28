@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "dev:force": "vite --force",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/head": "^0.5.1",
+    "shared-components": "0.0.1",
+    "vite-ssr": "^0.8.0",
+    "vue-router": "^4.0.6"
+  }
+}

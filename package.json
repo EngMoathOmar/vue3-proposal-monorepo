@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "born-monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "format": "yarn run prettier --ignore-path .gitignore --write ."
+  },
+  "dependencies": {
+    "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vitejs/plugin-vue-jsx": "^1.1.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3",
+    "vite": "^2.2.3",
+    "vue-tsc": "^0.0.24"
+  }
+}
