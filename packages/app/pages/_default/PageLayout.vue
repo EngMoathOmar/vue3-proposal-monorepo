@@ -7,7 +7,10 @@
       <a href="/">Home</a>
       <a href="/about">About</a>
     </div>
-    <div class="content"><slot /></div>
+    <div class="content">
+      <Header />
+      <slot />
+    </div>
   </div>
 </template>
 

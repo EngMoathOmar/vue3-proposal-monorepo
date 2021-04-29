@@ -1,10 +1,12 @@
 import { createSSRApp, defineComponent, h } from "vue"
-import PageLayout from "./PageLayout.vue"
+
+import Header from "shared-components/dist/Header/component.js"
+import "shared-components/dist/Header/styles.css"
+
 import { ContextProps } from "./types"
+import PageLayout from "./PageLayout.vue"
 
-export { createApp }
-
-function createApp(Page: any, contextProps: ContextProps) {
+export function createApp(Page: any, contextProps: ContextProps) {
   const PageWithLayout = defineComponent({
     render() {
       return h(
@@ -25,6 +27,8 @@ function createApp(Page: any, contextProps: ContextProps) {
   // `this.$routeParams` (e.g. `this.$routeParams.movieId` for a Route
   // String `/movie/:movieId`).
   app.config.globalProperties.$routeParams = contextProps.routeParams
+
+  app.use(Header)
 
   return app
 }
