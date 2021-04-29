@@ -1,8 +1,7 @@
-import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
-import viteSSR from "vite-ssr/plugin.js"
-import vueJsx from "@vitejs/plugin-vue-jsx"
+import ssr from "vite-plugin-ssr/plugin"
+import { defineConfig } from "vite"
 
 export default defineConfig({
-  plugins: [vue(), viteSSR(), vueJsx()],
+  plugins: [vue(), ssr()],
 })
